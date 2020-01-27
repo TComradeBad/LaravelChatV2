@@ -1,0 +1,51 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/routes/web.php
+Будет удалено .editorconfig
+Будет удалено .env.example
+Будет удалено .gitattributes
+Будет удалено .gitignore
+Будет удалено .idea/.gitignore
+Будет удалено .idea/LaravelChatV2.iml
+Будет удалено .idea/misc.xml
+Будет удалено .idea/modules.xml
+Будет удалено .idea/php.xml
+Будет удалено .phpstorm.meta.php
+Будет удалено .styleci.yml
+Будет удалено README.md
+Будет удалено _ide_helper.php
+Будет удалено app/
+Будет удалено artisan
+Будет удалено bootstrap/app.php
+Будет удалено bootstrap/cache/.gitignore
+Будет удалено composer.json
+Будет удалено composer.lock
+Будет удалено config/
+Будет удалено database/
+Будет удалено package.json
+Будет удалено phpunit.xml
+Будет удалено public/
+Будет удалено resources/
+Будет удалено routes/api.php
+Будет удалено routes/channels.php
+Будет удалено routes/console.php
+Будет удалено server.php
+Будет удалено storage/app/
+Будет удалено storage/framework/.gitignore
+Будет удалено storage/framework/cache/
+Будет удалено storage/framework/sessions/
+Будет удалено storage/framework/testing/.gitignore
+Будет удалено storage/framework/views/
+Будет удалено storage/logs/
+Будет удалено tests/
+Будет удалено webpack.mix.js
