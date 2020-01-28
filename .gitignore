@@ -10,7 +10,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/routes/web.php
 Будет удалено .editorconfig
 Будет удалено .env.example
 Будет удалено .gitattributes
