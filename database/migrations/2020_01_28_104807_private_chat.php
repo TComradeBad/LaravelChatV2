@@ -16,7 +16,7 @@ class PrivateChat extends Migration
         Schema::create("private_chats", function (Blueprint $table) {
             $table->bigIncrements("id");
             $table->string("name");
-            $table->integer("msg_count");
+            $table->integer("msg_count")->default("0");
             $table->timestamps();
         });
     }

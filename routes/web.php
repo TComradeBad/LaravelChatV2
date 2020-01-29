@@ -14,11 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/** Chat Routes */
+Route::middleware("auth")->group(function () {
+    Route::get("/user_chats", "ChatController@index");
+
+    Route::get("/private_chat/{id}", "ChatController@showPrivateChat");
+
+    Route::post("/create_chat", "ChatController@createChat");
+
+    Route::post("/startUpChat","ChatController@startUpChat");
+});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
