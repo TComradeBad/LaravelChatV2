@@ -19,7 +19,7 @@ class ChatController extends Controller
 
     public function showPrivateChat($id)
     {
-        return view("chat/privateChat");
+        return view("chat/privateChat", ["chat_id" => $id]);
     }
 
     public function createChat(Request $request)
@@ -31,10 +31,11 @@ class ChatController extends Controller
         return redirect("/user_chats");
     }
 
-    public function startUpChat()
+    public function message(Request $request)
     {
-        broadcast(new PrivateMessageSent(1,"hello"))->toOthers();
-        return response()->json(["status"=>"ok"]);
+        $data = $request->json()->all();
+        broadcast(new PrivateMessageSent($data["chat_id"], $data["message"],\Auth::user()))->toOthers();
     }
+
 
 }

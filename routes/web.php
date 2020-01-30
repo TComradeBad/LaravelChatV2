@@ -22,7 +22,7 @@ Route::middleware("auth")->group(function () {
 
     Route::post("/create_chat", "ChatController@createChat");
 
-    Route::post("/startUpChat","ChatController@startUpChat");
+    Route::post("/message","ChatController@message");
 });
 
 

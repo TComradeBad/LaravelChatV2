@@ -1,21 +1,27 @@
 const private_chat = new Vue({
     el: "#privateChat",
-    data: {
-        privateChatId: 1,
-        messages: [],
-        users: [],
+    data: function () {
+        return {
+            privateChatId: "",
+            messages: [],
+            users: [],
+        }
     },
     created() {
-        Echo.private("private-chat")
+        this.privateChatId = $("#privateChat").data("chat_id");
+        Echo.private("private-chat." + this.privateChatId)
             .listen("PrivateMessageSent", (e) => {
-                console.log(e);
+                this.messages.push(e);
             });
     },
 
     methods: {
 
-        sendMessage: function () {
-
+        sendMessage: function (message) {
+            axios.post("/message", {
+                "chat_id": message.chat_id,
+                "message": message.text,
+            });
         }
     },
 

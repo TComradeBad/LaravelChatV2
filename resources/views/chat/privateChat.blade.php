@@ -1,7 +1,9 @@
 @extends("layouts.app")
 @section("content")
-    <div id="privateChat">
-        <chat-form></chat-form>
+    <div id="privateChat" data-chat_id="{{$chat_id}}">
+        <chat-message v-bind:messages="messages"></chat-message>
+        <chat-form v-bind:chat_id="privateChatId"
+        v-on:send_message="sendMessage"></chat-form>
     </div>
 
 @endsection
